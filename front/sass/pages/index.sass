@@ -7,6 +7,7 @@ $text: #292929
 
 $font-suisse-bold: SuisseIntl-Bold, sans-serif //700
 $font-suisse-reg: SuisseIntl-Regular, sans-serif //400
+$font-suisse-med: SuisseIntl-Medium, sans-serif //500
 $font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600 //
 $font-wulkan: WulkanDisplay, sans-serif //
 
@@ -21,7 +22,7 @@ body
 
 .banner
   overflow: hidden
-  padding: 10% 0 13%
+  padding: 7% 0 13%
   background: $blue
   position: relative
   display: flex
@@ -55,7 +56,7 @@ body
       text-align: center
       font-family: $font-suisse-semb
       margin: 0 0 20px 0
-      font-size: 56px
+      font-size: 60px
       line-height: 68px
       letter-spacing: 0.03em
       text-transform: uppercase
@@ -66,21 +67,89 @@ body
         color: $magenta
     &-list
       display: flex
-      align-items: center
+      align-items: flex-start
+      justify-content: center
     &-item
-      font-family: $font-suisse-semb
-      font-size: 18px
-      line-height: 23px
-      text-align: center
-      letter-spacing: 0.03em
-      text-transform: uppercase
-      font-feature-settings: 'pnum' on, 'lnum' on
-      color: $grey
-      &:not(:last-child)
-        margin: 0 18px 0 0
+      display: flex
+      flex-direction: column
+      img
+        display: inline-block
+        margin-top: 15px
+      &:nth-child(1)
+        align-items: flex-start
+        margin: 0 5px 0 0
+        .banner__info-item-bottom
+          position: relative
+          &::before
+            content: '5274,15 kn'
+            position: absolute
+            font-family: $font-suisse-med
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 1px solid $magenta
+            background: $blue
+            border-radius: 4px
+            color: $grey
+            width: 71px
+            height: 17px
+            font-size: 12px
+            line-height: 12px
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            left: 0
+            bottom: -25px
+      &:nth-child(2)
+        margin: 0 15px 0 0
+      &:nth-child(3)
+        align-items: center
+        margin: 0 40px 0 0
+        .banner__info-item-top
+          position: relative
+          &::before
+            content: '226,04kn'
+            position: absolute
+            bottom: -1px
+            left: 12px
+            transform: rotate(-6.31deg)
+            font-family: $font-suisse-med
+            display: flex
+            align-items: center
+            justify-content: center
+            letter-spacing: 0.02em
+            font-size: 12px
+            line-height: 12px
+            text-transform: uppercase
+            border: 1px solid $magenta
+            background: $blue
+            color: $grey
+            border-radius: 4px
+            width: 65px
+            height: 17px
+      &:nth-child(5)
+        align-items: flex-end
+        margin-left: -40px
+        .banner__info-item-bottom
+          br
+            display: none
+      &-top
+        font-family: $font-suisse-med
+        font-size: 50px
+        line-height: 65px
+        text-transform: uppercase
+        color: $magenta
+        margin: 0 0 5px 0
+      &-bottom
+        font-family: $font-suisse-med
+        font-size: 18px
+        line-height: 24px
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $grey
+
 
   &__marquee
-    padding: 14px 0 14px 40px
+    padding: 27px 0 27px 25px
     background: $magenta
     min-width: 100%
     position: absolute
@@ -89,31 +158,22 @@ body
     z-index: 4
     display: flex
     align-items: center
-    &-list
-      margin: 0 18px 0 0
-      display: flex
-      align-items: center
-
-    &-item
+    &-text
       font-family: $font-suisse-semb
       font-size: 20px
       line-height: 26px
-      text-align: center
       letter-spacing: 0.03em
+      color: $grey
       text-transform: uppercase
       font-feature-settings: 'pnum' on, 'lnum' on
-      color: $grey
+      margin: 0 15px 0 0
       white-space: nowrap
-      &:not(:last-child)
-        margin: 0 20px 0 0
-      &:nth-child(2)
-        min-width: 40px
-        img
-          margin-top: 7px
-    &-fav
-      margin: 0 18px 0 0
-      min-width: 40px
-      height: 30px
-      background: url("../img/fav.svg") no-repeat 50% 0/contain
+    &-plus
+      min-width: 41px
+      width: 41px
+      height: 34px
+      background: url("../img/plus2.svg") no-repeat center/contain
+      margin: 0 15px 0 0
+
 
 

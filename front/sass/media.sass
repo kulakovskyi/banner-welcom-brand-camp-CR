@@ -23,9 +23,13 @@
     &__info
       transform: scale(1)
 
+@media screen and (max-width: 1620px)
+  .banner
+    padding: 5% 0 13%
+
 @media screen and (max-width: 1305px)
   .banner
-    padding: 7% 0 11%
+    padding: 4% 0 8%
     &__info
       transform: scale(.8)
     &__img
@@ -33,26 +37,20 @@
         left: -30px
         width: 52%
     &__marquee
-      padding: 9px 0 9px 15px
-      &-list
-        margin: 0 12px 0 0
-      &-item
+      padding: 10px 0 10px 17px
+      &-text
         font-size: 11px
-        line-height: 14px
-        &:not(:last-child)
-          margin: 0 12px 0 0
-        &:nth-child(2)
-          min-width: 24px
-          img
-            margin-top: 5px
-      &-fav
-        margin: 0 12px 0 0
-        min-width: 21px
-        height: 16px
+        line-height: 26px
+        margin: 0 10px 0 0
+      &-plus
+        margin: 0 10px 0 0
+        min-width: 24px
+        width: 24px
+
 
 @media screen and (max-width: 1120px)
   .banner
-    padding: 11% 0 14%
+    padding: 8% 0 14%
     &__img
       &-right
         background: none
@@ -68,10 +66,52 @@
         line-height: 46px
         margin: 0 0 10px 0
       &-item
-        font-size: 15px
-        line-height: 20px
+        img
+          margin-top: 10px
+        &:nth-child(1)
+          margin: 0 -5px 0 0
+          .banner__info-item-bottom
+            &::before
+              border-radius: 3px
+              width: 54px
+              height: 14px
+              font-size: 9px
+              line-height: 10px
+              left: 0
+              bottom: -20px
         &:nth-child(2)
-          max-width: 29px
+          margin: 0 14px 0 0
+        &:nth-child(3)
+          margin: 0 15px 0 0
+          .banner__info-item-top
+            &::before
+              bottom: -2px
+              left: 2px
+              transform: rotate(-6.31deg)
+              font-size: 9px
+              line-height: 10px
+              border-radius: 3px
+              width: 52px
+              height: 13px
+        &:nth-child(4)
+          margin: 0 8px 0 0
+        &:nth-child(5)
+          align-items: flex-end
+          margin: 0
+          .banner__info-item-bottom
+            text-align: end
+            br
+              display: block
+
+        img
+          max-width: 20px
+        &-top
+          font-size: 30px
+          line-height: 39px
+          margin: 0 0 5px 0
+        &-bottom
+          font-size: 12px
+          line-height: 14px
 
 
 @media screen and (max-width: 900px)
@@ -80,12 +120,23 @@
 
 @media screen and (max-width: 755px)
   .banner
+    padding: 7% 0 10%
     &__info
-      transform: scale(.75)
+      transform-origin: top center
+      transform: scale(.8)
 
 @media screen and (max-width: 627px)
   .banner
     padding: 70% 0 100px 0
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      min-width: 100%
+      left: 0
+      z-index: 1
+      height: 340px
+      background: linear-gradient(0deg, #000055 39.58%, rgba(0, 0, 85, 0) 100%)
     &__img
       &-left
         background: url("../img/img-mob.jpg") no-repeat 50% 0/contain
@@ -95,7 +146,7 @@
 @media screen and (max-width: 500px)
   .banner
     justify-content: stretch
-    padding: 75% 15px 30px
+    padding: 75% 15px 40px
     &__marquee
       display: none
       &-fav
@@ -116,15 +167,33 @@
           min-width: 35px
           max-width: 35px
 
+@media screen and (max-width: 415px)
+  .banner
+    &__info
+      &-item
+        &-bottom
+          white-space: nowrap
+        &:nth-child(1)
+          margin: 0
+        &:nth-child(2)
+          margin: 0
+        &:nth-child(3)
+          margin: 0 7px 0 0
+        &:nth-child(4)
+          margin: 0 8px 0 0
+        &:nth-child(5)
+          margin: 0
 
-@media screen and (max-width: 365px)
+
+
+
+@media screen and (max-width: 374px)
   .banner
     &__info
       &-title
-        font-size: 30px
-        line-height: 37px
-      &-item
-        font-size: 15px
-        line-height: 21px
+        font-size: 32px
+        line-height: 38px
+      &-list
+        transform: scale(.85)
 
 
