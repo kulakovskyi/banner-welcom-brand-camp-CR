@@ -1,0 +1,130 @@
+@media screen and (min-width: 1930px)
+  .banner
+    &__img
+      &-left
+        left: -70px
+        width: 52%
+      &-right
+        right: -70px
+        width: 52%
+
+@media screen and (min-width: 2300px)
+  .banner
+    &__img
+      &-left
+        left: -90px
+        width: 52%
+      &-right
+        right: -90px
+        width: 52%
+
+@media screen and (max-width: 1670px)
+  .banner
+    &__info
+      transform: scale(1)
+
+@media screen and (max-width: 1305px)
+  .banner
+    padding: 7% 0 11%
+    &__info
+      transform: scale(.8)
+    &__img
+      &-left
+        left: -30px
+        width: 52%
+    &__marquee
+      padding: 9px 0 9px 15px
+      &-list
+        margin: 0 12px 0 0
+      &-item
+        font-size: 11px
+        line-height: 14px
+        &:not(:last-child)
+          margin: 0 12px 0 0
+        &:nth-child(2)
+          min-width: 24px
+          img
+            margin-top: 5px
+      &-fav
+        margin: 0 12px 0 0
+        min-width: 21px
+        height: 16px
+
+@media screen and (max-width: 1120px)
+  .banner
+    padding: 11% 0 14%
+    &__img
+      &-right
+        background: none
+        display: none
+      &-left
+        width: 100%
+        left: 0
+        background: url("../img/img-tab.jpg") no-repeat 50% 0/contain
+    &__info
+      transform: scale(1)
+      &-title
+        font-size: 38px
+        line-height: 46px
+        margin: 0 0 10px 0
+      &-item
+        font-size: 15px
+        line-height: 20px
+        &:nth-child(2)
+          max-width: 29px
+
+
+@media screen and (max-width: 900px)
+  .banner
+    padding: 8% 0 13%
+
+@media screen and (max-width: 755px)
+  .banner
+    &__info
+      transform: scale(.75)
+
+@media screen and (max-width: 627px)
+  .banner
+    padding: 70% 0 100px 0
+    &__img
+      &-left
+        background: url("../img/img-mob.jpg") no-repeat 50% 0/contain
+    &__info
+      transform: scale(1)
+
+@media screen and (max-width: 500px)
+  .banner
+    justify-content: stretch
+    padding: 75% 15px 30px
+    &__marquee
+      display: none
+      &-fav
+        background: none
+        display: none
+    &__info
+      width: 100%
+      &-title
+        font-size: 34px
+        line-height: 40px
+        margin: 0 0 10px 0
+      &-item
+        font-size: 18px
+        line-height: 24px
+        &:not(:last-child)
+          margin: 0 12px 0 0
+        &:nth-child(2)
+          min-width: 35px
+          max-width: 35px
+
+
+@media screen and (max-width: 365px)
+  .banner
+    &__info
+      &-title
+        font-size: 30px
+        line-height: 37px
+      &-item
+        font-size: 15px
+        line-height: 21px
+
+
